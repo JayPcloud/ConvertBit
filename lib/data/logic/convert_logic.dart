@@ -113,12 +113,11 @@ class Converter {
       late int inputValue;
 
       if(inputHasDecimal) {
-        double decimal = (BigInt.parse(input.text.trim()) * BigInt.from(pow( 2, 8))).toDouble();
+        double decimal = (double.parse(input.text.trim()) * pow( 2, 8));
         inputValue = decimal.toInt();
       }else {
-        inputValue = BigInt.parse(input.text.trim()).toInt();
+        inputValue = int.parse(input.text.trim());
       }
-      // print((BigInt.parse(input.text.trim()) * BigInt.from(pow(118, 10))).toDouble());
 
       int bit = 0;
       List<int> allRemainders = [];
@@ -151,7 +150,7 @@ class Converter {
   void convertToDecimal() {
     clearPreviousCalculations();
     if(formKey.currentState!.validate()) {
-      BigInt answer = BigInt.from(0);
+      double answer = 0;
       List<String> split = input.text.trim().split('.');
       int exp = split[0].length;
       int decExp = 0;
@@ -159,7 +158,7 @@ class Converter {
       for (var element in split[0].characters) {
         exp-=1;
         final digit = int.parse(element);
-        final BigInt decValue = (BigInt.from(digit) * BigInt.from(pow(2, exp)));
+        final decValue = (digit * pow(2, exp)).toInt();
         final bitToDec = BitToDec(binaryDigit: digit, exp: exp, decValue: decValue.toDouble());
         answer += decValue;
         calcSteps.add(bitToDec);
@@ -168,8 +167,8 @@ class Converter {
         for (var element in split[1].characters) {
           decExp-=1;
           final digit = int.parse(element);
-          final decValue = (BigInt.from(digit) * BigInt.from(pow(2, decExp)));
-          final bitToDec = BitToDec(binaryDigit: digit, exp: decExp, decValue: decValue.toDouble());
+          final decValue = (digit * pow(2, decExp)).toDouble();
+          final bitToDec = BitToDec(binaryDigit: digit, exp: decExp, decValue: decValue);
           answer += decValue;
           calcSteps.add(bitToDec);
         }
