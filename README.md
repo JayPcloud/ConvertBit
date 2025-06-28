@@ -1,16 +1,19 @@
-# converter
+# ConvertBit
 
-A new Flutter project.
+ConvertBit is a Flutter app that converts between binary and decimal numbers while showing all the workings step-by-step.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Convert Binary to Decimal (step-by-step)
+- Convert Decimal to Binary (step-by-step)
+- Simple, user-friendly UI
+- Built with Flutter and Dart
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <td>Convert to Binary<br/><img src="https://drive.google.com/uc?export=view&id=1i92_ONwopPhHLtwWOKg7hxuE9Li8CeZm" alt="Convert to Binary" width="300"/></td>
+    <td>Convert to Decimal<br/><img src="https://drive.google.com/uc?export=view&id=1iGzWDWhTPN6FtUvxqLUe4Yq63UgZQZ2T" alt="Convert to Decimal" width="300"/></td>
+  </tr>
+</table>
